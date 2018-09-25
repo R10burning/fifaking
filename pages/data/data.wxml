@@ -1,0 +1,62 @@
+<view class='container' style='min-height:{{windowHeight}}'>
+  <view class='tabbar fixedTab'>
+    <view wx:for='{{tabData}}' class='tabItem {{index===activeIndex && "active"}}' wx:key='{{index}}' bindtap='toggle' data-key='{{index}}'>{{item}}</view>
+  </view>
+  <view style='display:{{activeIndex===0 ? "block" : "none" }};' id='score' class='tabView'>
+    <view class='tabView-title'>
+      <view style='flex:2'></view>
+      <view style='flex:8'>球队</view>
+      <view style='flex:2'>赛</view>
+      <view style='flex:2'>胜</view>
+      <view style='flex:2'>平</view>
+      <view style='flex:2'>负</view>
+      <view style='flex:3'>进/失</view>
+      <view style='flex:2'>积分</view>
+    </view>
+    <view>
+      <view class='tabView-content' wx:for='{{scoreData}}' wx:key='{{index}}'>
+        <view style='flex:2'>{{index+1}}</view>
+        <view style='flex:8;'>
+          <image src='{{item.src}}' mode='aspectFill' style='width:60rpx;height:60rpx;'></image>
+          <text style='position:relative;bottom:19rpx;left:20rpx;'>{{item.team}}</text>
+        </view>
+        <view style='flex:2'>{{item.played}}</view>
+        <view style='flex:2'>{{item.win}}</view>
+        <view style='flex:2'>{{item.draw}}</view>
+        <view style='flex:2'>{{item.lost}}</view>
+        <view style='flex:3'>{{item.goal}}</view>
+        <view style='flex:2'>{{item.score}}</view>
+      </view>
+    </view>
+  </view>
+  <view style='display:{{activeIndex===1 ? "block" : "none" }}' id='group' class='tabView'>
+    <view class='tabView-group' wx:for='{{groupData}}' wx:key='{{index}}'>
+      <view class='group-name'>{{item.groupName}}</view>
+      <view class='tabView-title'>
+        <view style='flex:2'></view>
+        <view style='flex:8'>球队</view>
+        <view style='flex:2'>赛</view>
+        <view style='flex:2'>胜</view>
+        <view style='flex:2'>平</view>
+        <view style='flex:2'>负</view>
+        <view style='flex:3'>进/失</view>
+        <view style='flex:2'>积分</view>
+      </view>
+      <view>
+        <view class='tabView-content' wx:for='{{item.data}}' wx:for-item="data" wx:key='{{keyIndex}}'  wx:for-index="keyIndex">
+          <view style='flex:2'>{{keyIndex+1}}</view>
+          <view style='flex:8;'>
+            <image src='{{data.src}}' mode='aspectFill' style='width:60rpx;height:60rpx;'></image>
+            <text style='position:relative;bottom:19rpx;left:20rpx;'>{{data.team}}</text>
+          </view>
+          <view style='flex:2'>{{data.played}}</view>
+          <view style='flex:2'>{{data.win}}</view>
+          <view style='flex:2'>{{data.draw}}</view>
+          <view style='flex:2'>{{data.lost}}</view>
+          <view style='flex:3'>{{data.goal}}</view>
+          <view style='flex:2'>{{data.score}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/match/match",
+    "pages/manage/manage",
+    "pages/data/data"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3B9DFA",
+    "navigationBarTextStyle": "#fff",
+    "navigationStyle": "default",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": false,
+    "backgroundColorTop": "#3B9DFA",
+    "backgroundColorBottom": "#3B9DFA",
+    "onReachBottomDistance": "5rpx"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#3B9DFA",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"src/images/homeNormal.png",
+        "selectedIconPath": "src/images/homeActive.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/match/match",
+        "iconPath": "src/images/msgNormal.png",
+        "selectedIconPath": "src/images/msgActive.png",
+        "text": "赛程"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "iconPath": "src/images/dataNormal.png",
+        "selectedIconPath": "src/images/dataActive.png",
+        "text": "数据"
+      },
+      {
+        "pagePath": "pages/manage/manage",
+        "iconPath": "src/images/meNormal.png",
+        "selectedIconPath": "src/images/meActive.png",
+        "text": "后台"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

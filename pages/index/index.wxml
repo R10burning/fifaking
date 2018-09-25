@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class='container'>
+  <scroll-view>
+    <swiper indicator-dots="true" autoplay="3000" interval="5000" duration="500" indicator-color="#fff" indicator-active-color="{{themColor}}">
+      <block wx:for="{{swiperData}}" wx:key="index">
+        <swiper-item>
+          <text class='swiper-title'>{{item.title}}</text>
+          <image src="{{item.src}}" mode='aspectFill' class="swiper-img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='match-box'>
+      <view class='header-title'>
+        <text style='color:{{themColor}}'>今日比赛</text>
+      </view>
+      <view class='match-item' wx:for="{{matchData}}" style="border-top:{{index===0 && '1px solid #eee'}}" wx:key="{{index}}">
+        <view class='match-titile'>
+          <text>{{item.matchTime}} {{item.matchType}}</text>
+        </view>
+        <view class='item-data'>
+          <view class='left'>
+            <image src='{{item.homeSrc}}' mode='aspectFill'></image>
+            <text>{{item.home}}</text>
+          </view>
+          <view class='middle'>
+            <text style='color:{{themColor}};letter-spacing:10rpx;'>{{item.score}}</text>
+          </view>
+          <view class='right'>
+            <image src='{{item.hostSrc}}' mode='aspectFill'></image>
+            <text>{{item.host}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

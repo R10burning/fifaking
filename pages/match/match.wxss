@@ -1,0 +1,51 @@
+.match-item {
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 40rpx;
+}
+
+.match-item .match-titile {
+  color: #666;
+  text-align: center;
+  flex: 1;
+}
+
+.match-item .match-titile text {
+  text-align: center;
+}
+
+.item-data {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-data image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.item-data .left, .item-data .right {
+  display: flex;
+  flex-direction: column;
+  width: 160rpx;
+  align-items: center;
+}
+
+.item-data .left text, .item-data .right text {
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.item-data .middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+}
+.matchDay{
+  background-color: #efefef;
+  padding:5px;
+  width:100%;
+  text-align: center;
+  font-size: 30rpx;
+}

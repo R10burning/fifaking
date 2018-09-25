@@ -1,0 +1,10 @@
+<view class='container'>
+  <view class='mask' style="height:{{windowHeight}}" wx:if='{{showModal}}'>
+    <view class='login-box'>
+      <input placeholder='管理员用户名' type="text" adjust-position='true' bindinput='username' placeholder-style="color:#3B9DFA;"/>
+      <input placeholder='管理员密码' type="password" adjust-position='true' bindinput='password' placeholder-style="color:#3B9DFA;"/>
+      <button bindtap='login' class='login'>登陆</button>
+    </view> 
+  </view>
+  <view>123123123</view>
+</view>

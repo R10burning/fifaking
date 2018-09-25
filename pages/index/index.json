@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "当前赛事",
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance": 0
+}

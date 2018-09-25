@@ -1,0 +1,13 @@
+/**app.wxss**/
+view,scroll-view,text,swiper{
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 30rpx;
+} 
+

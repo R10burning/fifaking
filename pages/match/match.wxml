@@ -1,0 +1,25 @@
+<view class='container'>
+  <scroll-view bindscroll="scroll" scroll-y>
+    <view wx:for="{{matchList}}" wx:key="{{index}}">
+      <view class='matchDay' style='color:{{themColor}}'>{{item.matchDay}}</view>
+      <view class='match-item' wx:for="{{item.data}}" wx:for-item="data"  wx:for-index="keyIndex" wx:key="{{keyIndex}}" style="border-top:{{keyIndex===0 && '1px solid #eee'}}">
+        <view class='match-titile'>
+          <text>{{data.matchTime}} {{data.matchType}}</text>
+        </view>
+        <view class='item-data'>
+          <view class='left'>
+            <image src='{{data.homeSrc}}' mode='aspectFill'></image>
+            <text>{{data.home}}</text>
+          </view>
+          <view class='middle'>
+            <text style='color:{{themColor}};letter-spacing:10rpx;'>{{data.score}}</text>
+          </view>
+          <view class='right'>
+            <image src='{{data.hostSrc}}' mode='aspectFill'></image>
+            <text>{{data.host}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
